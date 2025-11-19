@@ -14,8 +14,8 @@
     "storageResourceId": {
       "value": "${STORAGE_RESOURCE_ID}"
     },
-    "aifProjectResourceId": {
-      "value": "${AIF_PROJECT_RESOURCE_ID}"
+    "foundryProjectResourceId": {
+      "value": "${FOUNDRY_PROJECT_RESOURCE_ID}"
     },
     "appInsightsConnectionString": {
       "value": "DISABLED"

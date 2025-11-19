@@ -10,8 +10,8 @@ param entraAppDisplayName string
 @description('Full resource ID of the Storage Account that the MCP server will have access to through storage tools')
 param storageResourceId string
 
-@description('AI Foundry project resource ID for assigning Entra App role to AIF project managed identity')
-param aifProjectResourceId string
+@description('Microsoft Foundry project resource ID for assigning Entra App role to Foundry project managed identity')
+param foundryProjectResourceId string
 
 @description('Application Insights connection string. Use "DISABLED" to disable telemetry, or provide existing connection string. If omitted, new App Insights will be created.')
 param appInsightsConnectionString string = ''
@@ -77,11 +77,11 @@ module acaStorageAccountRoleAssignment './modules/aca-role-assignment-resource.b
   }
 }
 
-// Deploy Entra App role assignment for AIF project MI to access ACA
-module aifRoleAssignment './modules/aif-role-assignment-entraapp.bicep' = {
-  name: 'aif-role-assignment'
+// Deploy Entra App role assignment for Microsoft Foundry project MI to access ACA
+module foundryRoleAssignment './modules/foundry-role-assignment-entraapp.bicep' = {
+  name: 'foundry-role-assignment'
   params: {
-    aifProjectResourceId: aifProjectResourceId
+    foundryProjectResourceId: foundryProjectResourceId
     entraAppServicePrincipalObjectId: entraApp.outputs.entraAppServicePrincipalObjectId
     entraAppRoleId: entraApp.outputs.entraAppRoleId
   }
