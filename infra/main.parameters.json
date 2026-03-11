@@ -6,10 +6,10 @@
       "value": "${AZURE_LOCATION}"
     },
     "entraAppDisplayName": {
-      "value": "Azure MCP Storage Server API"
+      "value": "Fabric MCP Server API"
     },
     "acaName": {
-      "value": "azure-mcp-storage-server"
+      "value": "fabric-mcp-server"
     },
     "storageResourceId": {
       "value": "${STORAGE_RESOURCE_ID}"
