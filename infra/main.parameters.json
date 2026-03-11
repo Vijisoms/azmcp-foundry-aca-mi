@@ -9,7 +9,7 @@
       "value": "Azure MCP Storage Server API"
     },
     "acaName": {
-      "value": "azure-mcp-storage-server"
+      "value": "fabric-mcp-newumage-server"
     },
     "storageResourceId": {
       "value": "${STORAGE_RESOURCE_ID}"
